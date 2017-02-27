@@ -1,0 +1,350 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #7e7f84; /*назначили глобальный цвет всему макету*/
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: font-family "Lato", sans-serif;} /*подключили шрифт на весь боди*/
+					/*font-family: 'Droid Sans', sans-serif;*/
+
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration: underline;
+}
+a:hover {
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #f45a40; /*глобальный цвет для ссылок*/
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.center-block-main{ max-width: 1170px; margin:0 auto;}
+.z00{ background:rgba(7,7,7,0.3); position:absolute; z-index:2; width:100%;}
+.header-top{ padding:15px 0 25px 0px;}
+.logo {float:left;}
+.menu{ float:right; font-family: 'Droid Sans', sans-serif; margin-top:25px;}
+.menu li{ float:left; text-transform:uppercase; margin-right:30px; font-size:1.08em;}
+.menu li a{ text-decoration:none; color:rgba(255,255,255,1.00); font-weight:bold;}
+.menu li a:hover{ color:#4bcaff; text-decoration: underline; border:1px dotted red;}
+
+	/*-------------------------------------слайдер -----------------------------------------------------------*/
+.my-slider{
+	 height: 100vh;
+}
+.slide_txt{ position:absolute; top:35%; left:44%; max-width:700px;}
+.my-slider ul li{ position:relative; color:#fff; border-bottom:4px solid #4bcaff; font-size:0;}
+.my-slider ul li img{ width:100%;}
+.my-slider ul li h2{ margin-bottom:20px; font-size:48px; font-weight:300; line-height:1.1; text-shadow: 10px 10px 30px black;}
+.my-slider ul li p{ font-size:16px; text-shadow: 0 5px 20px white; line-height:1.1; font-weight:300; color:violet; }
+a.download{ border:2px solid red; padding:20px 50px; color:#fff; display: inline-block; margin-top:30px; border-radius:5px; font-size:15px; text-decoration:none; font-weight:600;}
+
+a.download02{ margin-left: 250px;}
+a.download03{ margin-left: -250px; top:-10px; color:black; position:absolute;}
+a.download04{ position:absolute; top:150px; left:-250px;}
+a.download05{ margin-left:-500px; margin-top:230px}
+
+a:hover.download{color:#4bcaff; border:2px solid #4bcaff; background-color:yellow;}
+.unslider-nav{ max-width:1170px; margin:-19px auto 0 auto; position:relative; top:-40px;}
+/*-------------------------------------слайдер end-----------------------------------------------------------*/
+
+
+/*блок 3 колонки*/
+.sum { background-color:#F9F9F9; border-bottom:4px solid #4bcaff; padding:30px 0 50px 0;}
+.sum>h2{ text-align:center; font-size:2.25em; font-weight:600; color:#6D08EC;}
+.sum>h3{ text-align:center; font-size:1.25em; font-weight:400; margin-bottom:50px;}
+
+.block_3-main{ margin-bottom:50px;}
+.block_3-main article{ float:left; width:30%; margin-left:5%;}
+.block_3-main article:first-child{ margin-left:0px;} /*можно так можно по другому - обнулить отступ слева*/
+		/*.block_3-main article.mar-left-0{ margin-left:0px;}*/
+.block_3-main article img{ display: block; margin:0 auto 20px auto;}
+.block_3-main article h2{ text-transform:uppercase; font-weight:600; font-size:1em; margin-bottom:20px; text-align:center;}
+.block_3-main article h2 a{ text-decoration:none; color:#1CF4AD;}
+.block_3-main article h2 a:hover{ text-decoration: underline; color:red;}
+		.block_3-main article p{ font-size:0.875em; text-align:center; line-height:1.5;}
+
+
+ /* блок 4 колонки*/
+/*пытался сам - получилось - вырезал в отдельный файл*/
+/* ниже иду по видео урокам*/
+
+.block4-section{ margin-bottom:60px;}
+.block4-section>h2{ text-align:center; color:#9314DC; font-size:1.375em; margin-bottom:10px; text-transform:uppercase;}
+.block4-section>h3{ text-align:center; color:#9314DC; font-size:1em; margin-bottom:20px; text-transform:uppercase;}
+.block4-main article{ width:23%; margin-left:2.6666666%; float:left;}
+.block4-main article:first-child{ margin-left:0;}
+.block4-main article img{ display:block; margin:0 auto 0px auto; border:1px solid; border-radius:60px;}
+.block4-main-content{ margin-top:10px;}
+.block4-main-content p{ font-size:0.625em; margin-bottom:15px; line-height:1.5; text-align: center; color:blue;}
+
+/*video*/
+.video{ background:url(images/videosection.jpg) center top no-repeat; padding:150px 0;
+background-size: cover;}
+.video img{ cursor:pointer; }
+.video-txt{ text-align:center; color:#fff;}
+.video-txt h2{ font-size:40px; margin-top:30px; font-weight:300;}
+.video-txt p{ font-size:25px; margin-top:30px; font-weight: bold; color:pink; line-height:1.5;}
+
+.subscrebe{ background-color:#414042; color:#fff; text-align:center; padding:30px 0;}
+.subscrebe h2{ font-size:3.43em; text-transform:uppercase; margin-top:30px;}
+.subscrebe p{ margin-top:60px; margin-bottom:50px;}
+.dwnload-btn-blue{ text-transform:uppercase; font-size:1.875em; background-color:#7155FF;
+border:none; color:#fff; padding:30px 30px; cursor:pointer; border-radius:20px 50px;}
+.dwnload-btn-blue:hover{ color:red; background-color:yellow;}
+
+.map_big{ position:relative; height:550px;}
+.contact_block{ background-color:rgba(75,202,255,0.7); width:320px; position:absolute; top:20px; left:50%;
+margin-left:-160px; border-radius:25px; padding:30px 30px 10px 30px;}
+.contact_block>h2{ color:#FFFFFF; text-align:center; font-size:2.0em; padding:20px 0 20px 0; }
+.form_map{ text-align:center;}
+.mapmail{ width:100%; font-size:0.75em; text-align:center; box-sizing:border-box;
+margin-bottom:20px; padding:10px 10px; border:none; border-radius:15px;}
+.mapmail_txt{width:100%; font-size:0.75em; text-align:center; box-sizing:border-box;
+margin-bottom:10px; padding:20px 0 60px 0; border:none; border-radius:15px;}
+.ftrsubmit{	font-size:0.875em; border:none; background:#414042; padding:10px 60px; color:#72b3cc; cursor:pointer; border-radius:25px; }
+
+
+.ftr{
+	background:#2a2d34; padding:40px 0;
+}
+
+
+/*медиа запросы вестка под разное расширение*/
+
+@media screen and (max-width:1000px){
+	.my-slider ul li h2{top:10px; left:80px; font-size:40px; color:white;}
+	.my-slider ul li h3{ position:absolute; top:170px; left:100px; font-size:25px; text-align:center; color:#000CF5;}
+	.my-slider ul li p{ top:300px; left:60px; color:white; font-weight: 100; }
+	a.download05{ margin-left:0px; margin-top:10px}
+	.block4-main article{ width:20%; margin-left:6.5%;}
+	}
+
+@media screen and (max-width:900px){
+
+	.logo{ color:red; font-weight:bold;}
+	.my-slider ul li h2{top:10px; left:80px; font-size:40px; color:red;}
+	.my-slider ul li h3{ position:absolute; top:170px; left:100px; font-size:25px; text-align:center; color:#000CF5;}
+	.my-slider ul li p{ top:300px; left:60px; color:white; font-weight: 100; }
+	.block4-main article{ width:45%; margin:0 2.5% 30px 2.5%; float:left;}
+.block4-main article:first-child{ margin-left: 2.5%;}
+	.block4-main article img{ display:block; margin:0 auto 0px auto; width:100%}
+	.subscrebe h2{ text-align:center; float:none; margin-bottom:10px;}
+	.sub-form{ float:none; display: table; margin:0 auto; }
+	}
+
+@media screen and (max-width:640px){
+	.my-slider ul li h2{font-size:20px; margin-top:25px;}
+	.my-slider ul li p{ font-size:12px; text-shadow: 0 5px 20px white; line-height:1.1; font-weight:100; color:white; }
+a.download{ margin-top:20px; border-radius:5px; font-size:12px; text-decoration:none; font-weight:100;
+padding:10px 30px;}
+a.download02{ margin-left:0px;}
+a.download03{ margin-left:0px; margin-top:150px; color:white;}
+a.download04{ position:absolute; top:130px; left:-90px;}
+.unslider-nav{ max-width:1170px; margin:-19px auto 0 auto; position:relative; top:-10px;}
+.subscrebe h2{ font-size:2.43em; margin-top:10px;}
+}
+
+
+@media screen and (max-width:480px){
+		.logo {float:none; font-size:1.375em; display:table; margin:0 auto; margin-bottom:10px;}
+		.contact-backet{float:none; text-align:center;}
+		.menu li{ font-size:0.675em;}
+		.my-slider ul li h3{ top:100px; left:15px; font-size:20px; color:red;}
+	.my-slider ul li p{ top:180px; left:15px; color:#F57B11; font-weight:100; }
+	.block_3-main article{ float:none; width:100%; margin-left:0px;}
+	.block_3-main article img{ width:100%; margin-bottom:5px;}
+	.block_3-main article h2{ margin-bottom:5px;}
+	.block_3-main article p{ font-size:0.875em; margin-bottom:15px;}
+		.about-content{ float:none; width:100%; margin-top:-60px; }
+	.about-content h2{margin-bottom:10px;}
+.about-content p{  margin-bottom:5px;}
+.map{ float:none; max-width:100%;}
+.map-in{ max-height:100%; overflow:hidden;}
+
+.email-inpt{ font-size:0.575em; width:100px; padding:7px 10px;}
+.submit-btn{ font-size:0.575em; padding:7px 10px;}
+.subscrebe{ padding:10px 0; margin-top:-40px;}
+.subscrebe h2{ font-size:15px;}
+.sub-form{ font-size:15px; }
+		}
+
+@media screen and (max-width:414px){
+	.header-backet{ float:none; margin-left:0px;}
+	.menu li{ float:none;}
+		.my-slider ul li h2{top:5px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:40px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:120px; left:5px; font-weight:0; }
+	}
+
+@media screen and (max-width:375px){
+	.header-top{ padding:10px 0;}
+	.contact-backet{ float:none;}
+	.header-backet{ margin-left:0px;}
+	.header-bottom{ margin-top:0px;}
+	.menu li{ float:none;}
+		.my-slider ul li h2{top:5px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:40px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:80px; left:5px; color:blue; font-weight:0; }
+		.block_3-main{ margin-bottom:20px;}
+		.block_3-main article h2{ font-size:1.0em; margin-bottom:10px;}
+		.block_3-main article p{ font-size:0.675em;}
+		.block4-section>h2{ font-size:1.10em; margin-bottom:10px;}
+		.block4-main-content h2{ font-size:0.875em;}
+		.block4-main-content h3{ font-size:0.775em;}
+	}
+
+@media screen and (max-width:320px){
+		.contact-backet p{ float:none; margin-bottom:5px}
+		.header-backet{ border:1px solid gray; padding:7px 25px; margin-left:0px;}
+		.menu{ float:none; display:inline-block;}
+		.menu li{ float:none; text-transform:uppercase; font-size:0.875em;}
+
+		.my-slider ul li h2{top:10px; left:5px; font-size:20px; color:green;}
+		.my-slider ul li h3{ top:50px; left:5px; font-size:10px; color:red;}
+		.my-slider ul li p{ top:90px; left:15px; color:blue; font-weight:0; }
+
+	.block_3-main{ margin-bottom:10px;}
+	.block4-section>h2{ font-size:25px; margin-bottom:10px;}
+
+	.block_3-main article img{ width:100%; margin-bottom:5px;}
+	.block_3-main article h2{ margin-bottom:5px;}
+	.block_3-main article p{ font-size:0.875em; margin-bottom:15px;}
+
+	.block4-main article{ width:95%; margin:0 2.5% 10px 2.5%; float:left;}
+.block4-main article:first-child{ margin-left: 2.5%;}
+	.block4-main article img{ display:block; margin:0 auto 0px auto; width:100%}
+
+	.about-content{ float:none; width:100%; margin-top:-60px; }
+	.about-content h2{margin-bottom:10px;}
+.about-content p{  margin-bottom:5px;}
+.map{ float:none; max-width:100%;}
+.map-in{ max-height:100%; overflow:hidden;}
+
+.email-inpt{ font-size:0.575em; width:100px; padding:7px 10px;}
+.submit-btn{ font-size:0.575em; padding:7px 10px;}
+.subscrebe{ padding:10px 0; margin-top:-40px;}
+.subscrebe h2{ font-size:15px;}
+.sub-form{ font-size:15px; }
+		}
+
+		/*кнопки вверх низ*/
+.topbutton {
+		width:60px;
+		border:2px solid red;
+		background:#f7f7f7;
+		text-align:center;
+		padding:5px;
+		position:fixed;
+		bottom:50px;
+		right:10px;
+		cursor:pointer;
+		color:#333;
+		font-family:verdana;
+		font-size:12px;
+		text-decoration: none;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		}
+
+.bottom_button {
+		width:60px;
+		border:2px solid red;
+		background:#f7f7f7;
+		text-align:center;
+		padding:5px;
+		position:fixed;
+		bottom:10px;
+		right:10px;
+		cursor:pointer;
+		color:#333;
+		font-family:verdana;
+		font-size:12px;
+		text-decoration: none;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		}
+
+		.topbutton:hover, .bottom_button:hover{
+			color: red;
+			background: #2196f3;
+		}
